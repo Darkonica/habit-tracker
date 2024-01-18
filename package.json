@@ -1,18 +1,18 @@
 {
-  "name": "react-ts-boilerplate",
+  "name": "habit-tracker",
   "version": "1.0.0",
-  "description": "React + Typescript + Webpack + SCSS Modules boilerplate",
+  "description": "Habit tracker",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Darkonica/react-ts-boilerplate.git"
+    "url": "git+https://github.com/Darkonica/habit-tracker.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Darkonica/react-ts-boilerplate/issues"
+    "url": "https://github.com/Darkonica/habit-tracker/issues"
   },
-  "homepage": "https://github.com/Darkonica/react-ts-boilerplate#readme",
+  "homepage": "https://github.com/Darkonica/habit-tracker#readme",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config tools/webpack/webpack.config.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config tools/webpack/webpack.config.prod.js",
