@@ -15,6 +15,7 @@
     "paths": {
       "*": ["node_modules/*"],
       "@assets/*": ["./assets/*"],
+      "@styles/*": ["./src/styles/*"],
       "@src/*": ["./src/*"]
     }
   },

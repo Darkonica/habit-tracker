@@ -1,0 +1,14 @@
+.habitsPomodoroCont {
+  display: flex;
+
+  .habitsCont {
+    flex: 1 1 50%;
+  }
+  .pomodoroCont {
+    flex: 1 1 50%;
+  }
+}
+
+.graphCont {
+  width: 100%;
+}
