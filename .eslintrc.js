@@ -14,8 +14,8 @@ module.exports = {
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "tsconfig.json",
-    "tsconfigRootDir": __dirname
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./"
   },
   "settings": {
     "import/resolver": {
@@ -29,7 +29,10 @@ module.exports = {
           ["@styles", "./src/styles"]
         ],
         "extensions": [".js", ".jsx", ".ts", ".tsx", ".scss"]
-      }
+      },
+      "typescript": {
+
+      },
     },
     "react": {
       "version": "latest"
