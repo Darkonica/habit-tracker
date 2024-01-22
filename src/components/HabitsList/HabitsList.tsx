@@ -9,27 +9,27 @@ export const HabitsList = () => {
         {/* separate component maybe */}
         <li>
           <label>
-            <input type="checkbox" /> Habit name
+            <input type="checkbox" /> Jump rope
           </label>
         </li>
         <li>
           <label>
-            <input type="checkbox" /> Habit name
+            <input type="checkbox" /> Power training
           </label>
         </li>
         <li>
           <label>
-            <input type="checkbox" /> Habit name
+            <input type="checkbox" /> Reading
           </label>
         </li>
         <li>
           <label>
-            <input type="checkbox" /> Habit name
+            <input type="checkbox" /> Guitar
           </label>
         </li>
         <li>
           <label>
-            <input type="checkbox" /> Habit name
+            <input type="checkbox" /> English
           </label>
         </li>
       </ul>

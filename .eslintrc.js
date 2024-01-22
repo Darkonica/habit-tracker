@@ -1,4 +1,4 @@
-{
+module.exports = {
   "env": {
     "browser": true,
     "es6": true,
@@ -13,17 +13,22 @@
     "plugin:import/warnings"
   ],
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "tsconfigRootDir": __dirname
+  },
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".scss"]
       },
       "alias": {
         "map": [
           ["@src", "./src"],
-          ["@assets", "./assets"]
+          ["@assets", "./assets"],
+          ["@styles", "./src/styles"]
         ],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".scss"]
       }
     },
     "react": {

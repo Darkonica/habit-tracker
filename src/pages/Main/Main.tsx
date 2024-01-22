@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { HabitsList } from '@src/components/HabitsList';
 import { PomodoroTimer } from '@src/components/PomodoroTimer';
 import { Graph } from '@src/components/Graph';
-import commonStyles from '../../styles/common.scss';
+import commonStyles from '@styles/common.scss';
 import styles from './styles.scss';
 
 export const Main = () => {
