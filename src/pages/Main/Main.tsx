@@ -1,6 +1,4 @@
-import { HabitsList } from '@src/components/HabitsList';
-import { PomodoroTimer } from '@src/components/PomodoroTimer';
-import { Graph } from '@src/components/Graph';
+import { HabitsList, PomodoroTimer, Graph } from '@src/components';
 import commonStyles from '@styles/common.scss';
 import styles from './styles.scss';
 

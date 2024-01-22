@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainPage } from '@src/pages/Main';
+import { MainPage } from '@src/pages';
 import { Header } from './ui/Header';
 import './App.scss';
 
