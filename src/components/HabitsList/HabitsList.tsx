@@ -1,3 +1,4 @@
+import { Checkbox } from '@src/components/ui';;
 import styles from './styles.scss';
 
 export const HabitsList = () => {
@@ -5,31 +6,20 @@ export const HabitsList = () => {
     <>
       <h3>Your habits</h3>
       <ul className={styles.list}>
-        {/* separate component maybe */}
         <li>
-          <label>
-            <input type="checkbox" /> Jump rope
-          </label>
+          <Checkbox label="Jump rope" />
         </li>
         <li>
-          <label>
-            <input type="checkbox" /> Power training
-          </label>
+          <Checkbox label="Power training" />
         </li>
         <li>
-          <label>
-            <input type="checkbox" /> Reading
-          </label>
+          <Checkbox label="Reading" />
         </li>
         <li>
-          <label>
-            <input type="checkbox" /> Guitar
-          </label>
+          <Checkbox label="Guitar" />
         </li>
         <li>
-          <label>
-            <input type="checkbox" /> English
-          </label>
+          <Checkbox label="English" />
         </li>
       </ul>
     </>

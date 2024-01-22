@@ -1,0 +1,8 @@
+.checkbox {
+  margin-right: 12px;
+  margin-bottom: 6px;
+
+  &:checked+span {
+    text-decoration: line-through;
+  }
+}

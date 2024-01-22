@@ -1,4 +1,5 @@
 import { LineChart, Line, ResponsiveContainer, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import Select from 'react-select';
 import styles from './styles.scss';
 
 const data = [
@@ -47,9 +48,33 @@ const data = [
 ]
 
 export const Graph = () => {
+  const timePickerOptions = [
+    { value: 'week', label: 'Week' },
+    { value: 'month', label: 'Month' },
+    { value: 'year', label: 'Year' }
+  ];
+  const graphViewOptions = [
+    { value: 'Common', label: 'Common' },
+    { value: 'Separate', label: 'Separate' },
+  ];
+
   return (
     <div className={styles.container}>
-      <div>Graph</div>
+      <div className={styles.graphControls}>
+        <div className={styles.timePicker}>
+          <Select
+            defaultValue={timePickerOptions[0]}
+            options={timePickerOptions}
+          />
+        </div>
+
+        <div className={styles.graphView}>
+          <Select
+            defaultValue={graphViewOptions[0]}
+            options={graphViewOptions}
+          />
+        </div>
+      </div>
 
       <ResponsiveContainer width="100%" height="100%">
         <LineChart width={730} height={250} data={data}>
