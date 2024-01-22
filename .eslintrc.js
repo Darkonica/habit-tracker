@@ -14,8 +14,8 @@ module.exports = {
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json",
-    "tsconfigRootDir": "./"
+    "project": ["**/tsconfig.json"],
+    "tsconfigRootDir": __dirname
   },
   "settings": {
     "import/resolver": {
@@ -40,6 +40,8 @@ module.exports = {
   },
   "rules": {
     "react/prop-types": "off",
-    "@typescript-eslint/no-var-requires": "off"
+    "@typescript-eslint/no-var-requires": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
   }
 }

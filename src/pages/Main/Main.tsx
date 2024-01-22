@@ -1,4 +1,3 @@
-import React from 'react';
 import { HabitsList } from '@src/components/HabitsList';
 import { PomodoroTimer } from '@src/components/PomodoroTimer';
 import { Graph } from '@src/components/Graph';

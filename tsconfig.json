@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "jsx": "react",
+    "jsx": "react-jsx",
     "allowJs": true,
-    "target": "ES6",
+    "target": "es2015",
     "module": "ESNext",
     "skipLibCheck": true,
     "esModuleInterop": true,

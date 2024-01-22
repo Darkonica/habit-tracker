@@ -1,4 +1,3 @@
-import React from 'react';
 import { LineChart, Line, ResponsiveContainer, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import styles from './styles.scss';
 
