@@ -1,3 +1,29 @@
+@import '@styles/variables';
+
 .title {
-  
+
+}
+
+.progressbarCont {
+  width: 200px;
+  height: 200px;
+  margin: 0px auto 16px;
+
+  .statusHiddenButton {
+    color: $text-color;
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+  }
+
+  .status {
+    position: absolute;
+    bottom: 20%;
+  }
+}
+.pomodoroCount {
+  height: 20px;
+  margin-bottom: 16px;
 }
