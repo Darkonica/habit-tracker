@@ -1,7 +1,22 @@
 @import '@styles/variables';
 
-.title {
 
+.activityCont {
+  margin-top: 18px;
+  margin-bottom: 16px;
+
+  button {
+    color: $text-color;
+    background: none;
+    padding: 0 10px 5px 10px;
+    margin: 0 15px 0 0;
+    cursor: pointer;
+    border: none;
+
+    &.active, &:hover {
+      border-bottom: 2px solid $main-color;
+    }
+  }
 }
 
 .progressbarCont {
@@ -23,6 +38,7 @@
     bottom: 20%;
   }
 }
+
 .pomodoroCount {
   height: 20px;
   margin-bottom: 16px;
