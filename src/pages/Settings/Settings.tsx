@@ -1,4 +1,5 @@
 import commonStyles from '@styles/common.scss';
+import { PomodoroSettings } from './components/PomodoroSettings';
 import styles from './styles.scss';
 
 export const Settings = () => {
@@ -9,24 +10,7 @@ export const Settings = () => {
       <h2>Habits</h2>
 
       <h2>Pomodoro</h2>
-      <div className={styles.settingName}>Time (Minutes)</div>
-
-      <div className={styles.timeCont}>
-        <div className="timeBlock">
-          <div className={styles.settingSubName}>pomodoro</div>
-          <input type="number"></input>
-        </div>
-        <div className="timeBlock">
-          <div className={styles.settingSubName}>short break</div>
-          <input type="number"></input>      
-        </div>
-        <div className="timeBlock">
-          <div className={styles.settingSubName}>long break</div>
-          <input type="number"></input>
-        </div>
-      </div>
-
-
+      <PomodoroSettings />
 
       <h2>Graph</h2>
       {/* I don't know what can be here (for now) */}
