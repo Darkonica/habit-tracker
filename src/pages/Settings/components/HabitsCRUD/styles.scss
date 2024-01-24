@@ -1,0 +1,46 @@
+@import '@styles/variables';
+
+.habitsCRUDCont {
+
+}
+
+.habitsListCont {
+
+  .habitsList {
+    max-width: 400px;
+    width: 100%;
+    padding-left: 0;
+    list-style-type: none;
+
+    li {
+      margin-bottom: 8px;
+      padding: 6px 14px 4px 14px;
+      background-color: lighten($bg-color, 5%);
+      // TODO: fix shadow
+      box-shadow: 0px 3px 5px -3px $main-color-shadow;
+
+      .habit {
+        input {
+          width: 100%;
+        }
+      }
+
+    }
+  }
+}
+
+// TODO: ui component
+button {
+  width: 100%;
+  color: $text-color;
+  background: none;
+  padding: 0 10px 3px 10px;
+  margin: 10px 15px 0 0;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid $main-color;
+
+  &.active, &:hover {
+
+  }
+}

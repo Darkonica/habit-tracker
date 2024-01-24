@@ -4,6 +4,7 @@
   margin-top: 18px;
   margin-bottom: 16px;
 
+  // TODO: ui component
   button {
     color: $text-color;
     background: none;
@@ -22,6 +23,11 @@
   width: 200px;
   height: 200px;
   margin: 0px auto 16px;
+
+  &:active {
+    padding: 2px;
+    transition: all 30ms linear;
+  }
 
   .statusHiddenButton {
     color: $text-color;
