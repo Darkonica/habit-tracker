@@ -34,12 +34,34 @@ const HABITS = [
 export const HabitsCRUD = () => {
   const [habits, setHabits] = useState(HABITS);
   const [editHabitId, setEditHabitId] = useState(null);
+  const [editHabitName, setEditHabitName] = useState('');
 
   const handleNewHabitButton = () => {
     const newHabit = {...HABIT, id: uuidv4()};
 
     setHabits([...habits, newHabit]);
     setEditHabitId(newHabit.id);
+  }
+
+  const handleEditChanges = (value) => {
+    setEditHabitName(value);
+  }
+
+  const handleOKButton = () => {
+    const updatedHabits = habits.map(item => {
+      if (item.id !== editHabitId) return item;
+
+      return {...item, name: editHabitName};
+    })
+
+    setEditHabitId(null);
+    setEditHabitName('');
+    setHabits(updatedHabits);
+  }
+
+  const handleEditHabitButton = (id) => {
+    setEditHabitId(id);
+    setEditHabitName(habits.find(item => item.id === id).name);
   }
 
   const getHabitsList = () => {
@@ -49,11 +71,31 @@ export const HabitsCRUD = () => {
           <li key={item.id}>
             {editHabitId === item.id && (
               <div className={styles.habit}>
-                <Input type="text" autoFocus />
+                <Input
+                  type="text"
+                  value={editHabitName}
+                  onChange={handleEditChanges}
+                  autoFocus
+                />
+                <button
+                  className={styles.okButton}
+                  onClick={handleOKButton}
+                >
+                  ok
+                </button>
               </div>
             )}
+
             {editHabitId !== item.id && (
-              <div className={styles.habit}>{item.name}</div>
+              <div className={styles.habit}>
+                {item.name}
+                <button
+                  className={styles.editButton}
+                  onClick={() => handleEditHabitButton(item.id)}
+                >
+                  edit
+                </button>
+              </div>
             )}
           </li>
         ))}
@@ -68,8 +110,6 @@ export const HabitsCRUD = () => {
       <div className={styles.habitsListCont}>
         {getHabitsList()}
       </div>
-
-      
 
       {/* Drag'n'drop ordering */}
     </div>

@@ -20,8 +20,20 @@
       box-shadow: 0px 3px 5px -3px $main-color-shadow;
 
       .habit {
+        display: flex;
+        justify-content: space-between;
+
         input {
-          width: 100%;
+          width: calc(100% - 50px);
+        }
+
+        .okButton {
+          max-width: 40px;
+          margin: 0 0 0 5px;
+        }
+        .editButton {
+          max-width: 40px;
+          margin: 0 0 0 5px;
         }
       }
 
