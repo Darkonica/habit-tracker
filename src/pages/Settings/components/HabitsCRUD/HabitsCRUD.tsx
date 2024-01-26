@@ -51,7 +51,7 @@ export const HabitsCRUD = () => {
     const updatedHabits = habits.map(item => {
       if (item.id !== editHabitId) return item;
 
-      return {...item, name: editHabitName};
+      return {...item, name: editHabitName !== '' ? editHabitName : 'Untitled'};
     })
 
     setEditHabitId(null);

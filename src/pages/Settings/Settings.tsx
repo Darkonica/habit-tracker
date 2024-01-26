@@ -1,5 +1,5 @@
 import commonStyles from '@styles/common.scss';
-// index.js
+// TODO: index.js
 import { HabitsCRUD } from './components/HabitsCRUD';
 import { PomodoroSettings } from './components/PomodoroSettings';
 import styles from './styles.scss';
