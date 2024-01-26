@@ -1,17 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Input } from '@src/components/ui';
+import { DefaultSettingsType } from '@src/common/types';
 import styles from './styles.scss';
 
 enum DefaultSettings {
   POMODORO = 'POMODORO',
   SHORT_BREAK = 'SHORT_BREAK',
   LONG_BREAK = 'LONG_BREAK',
-}
-
-type DefaultSettingsType = {
-  POMODORO: number,
-  SHORT_BREAK: number,
-  LONG_BREAK: number,
 }
 
 const DEFAULT_SETTINGS = {

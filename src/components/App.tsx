@@ -7,7 +7,7 @@ const Application: React.FC = () => {
   return (
     <div id='app'>
       <Header />
-      <SettingsPage />
+      <MainPage />
     </div>
   );
 };

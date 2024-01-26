@@ -3,6 +3,8 @@ import commonStyles from '@styles/common.scss';
 import styles from './styles.scss';
 
 export const Main = () => {
+  const pomodoroSettings = JSON.parse(localStorage.getItem('settings'));
+  
   return (
     <div className={commonStyles.wrapper}>
       <div className={styles.habitsPomodoroCont}>
@@ -11,7 +13,7 @@ export const Main = () => {
         </div>
 
         <div className={styles.pomodoroCont}>
-          <PomodoroTimer />
+          <PomodoroTimer settings={pomodoroSettings} />
         </div>
       </div>
 

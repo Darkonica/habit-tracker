@@ -1,16 +1,17 @@
 // TODO: little refactoring
 import { useEffect, useState, useRef } from 'react';
+import { DefaultSettingsType } from '@src/common/types';
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import styles from './styles.scss';
 
-// enum DefaultTimer {
+// enum settings {
 //   POMODORO = 1500,
 //   LONG_BREAK = 900,
 //   SHORT_BREAK = 300,
 // }
 // Just for testing
-enum DefaultTimer {
+enum settings {
   POMODORO = 5,
   LONG_BREAK = 4,
   SHORT_BREAK = 3,
@@ -19,9 +20,13 @@ enum CurrentActivity {
   POMODORO = "pomodoro",
   LONG_BREAK = "long break",
   SHORT_BREAK = "short break",
-} 
+}
 
-export const PomodoroTimer = () => {
+interface Props {
+  settings: DefaultSettingsType,
+}
+
+export const PomodoroTimer = ({ settings }: Props) => {
   const [timer, setTimer] = useState(5); // in seconds
   const [pomodoroCount, setPomodoroCount] = useState(0);
   const [currentActivity, setCurrentActivity] = useState(CurrentActivity.POMODORO);
@@ -38,7 +43,7 @@ export const PomodoroTimer = () => {
       // Chain of breaks and pomodoro
       if (currentActivity !== CurrentActivity.POMODORO) {
         setCurrentActivity(CurrentActivity.POMODORO);
-        setTimer(DefaultTimer.POMODORO);
+        setTimer(settings.POMODORO);
       }
 
       if (currentActivity === CurrentActivity.POMODORO) {
@@ -46,10 +51,10 @@ export const PomodoroTimer = () => {
 
         if (updatedPomodoroCount % 4 === 0) {
           setCurrentActivity(CurrentActivity.LONG_BREAK);
-          setTimer(DefaultTimer.LONG_BREAK);
+          setTimer(settings.LONG_BREAK);
         } else {
           setCurrentActivity(CurrentActivity.SHORT_BREAK);
-          setTimer(DefaultTimer.SHORT_BREAK);
+          setTimer(settings.SHORT_BREAK);
         }
 
         setPomodoroCount(updatedPomodoroCount);
@@ -79,13 +84,13 @@ export const PomodoroTimer = () => {
     clearInterval(timerId.current);
 
     if (activity === CurrentActivity.POMODORO) {
-      setTimer(DefaultTimer.POMODORO);
+      setTimer(settings.POMODORO);
     }
     if (activity === CurrentActivity.SHORT_BREAK) {
-      setTimer(DefaultTimer.SHORT_BREAK);
+      setTimer(settings.SHORT_BREAK);
     }
     if (activity === CurrentActivity.LONG_BREAK) {
-      setTimer(DefaultTimer.LONG_BREAK);
+      setTimer(settings.LONG_BREAK);
     }
     setIsPause(true);
   }
