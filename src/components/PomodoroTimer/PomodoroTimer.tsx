@@ -27,10 +27,10 @@ interface Props {
 }
 
 export const PomodoroTimer = ({ settings }: Props) => {
-  const [timer, setTimer] = useState(5); // in seconds
+  const [timer, setTimer] = useState(settings.POMODORO); // in seconds
   const [pomodoroCount, setPomodoroCount] = useState(0);
   const [currentActivity, setCurrentActivity] = useState(CurrentActivity.POMODORO);
-  const [isPause, setIsPause] = useState(false);
+  const [isPause, setIsPause] = useState(true);
   
   const timerId = useRef<ReturnType<typeof setInterval>>(null);
 

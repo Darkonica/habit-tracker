@@ -1,6 +1,7 @@
 @import '@styles/variables';
 
 .activityCont {
+  display: flex;
   margin-top: 18px;
   margin-bottom: 16px;
 
@@ -14,6 +15,7 @@
     border: none;
 
     &.active, &:hover {
+      padding-bottom: 3px;
       border-bottom: 2px solid $main-color;
     }
   }
